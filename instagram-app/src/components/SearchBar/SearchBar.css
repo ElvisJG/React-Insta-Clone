@@ -12,3 +12,23 @@
 hr {
   height: 3rem;
 }
+
+.image {
+  width: 10%;
+}
+
+.logo {
+  width: 20%;
+}
+
+.search-bar {
+  width: 40%;
+}
+input {
+  line-height: 30px;
+  text-align: center;
+}
+
+.icons {
+  width: 30%;
+}

@@ -6,7 +6,8 @@ export default () => {
     <div className='search-bar-container'>
       <div className='image' />
       <hr />
-      <div>
+      <div className='logo' />
+      <div className='search-bar'>
         <input type='text' placeholder='🔎 search' />
       </div>
       <div className='icons'>1</div>
