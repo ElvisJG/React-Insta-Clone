@@ -4,7 +4,7 @@ import './SearchBar.css';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaRegCompass } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';
-import { FaSearch } from 'react-icons/fa';
+// import { FaSearch } from 'react-icons/fa';
 
 export default () => {
   return (
