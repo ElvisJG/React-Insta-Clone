@@ -3,7 +3,7 @@ import PostHeader from './PostHeader';
 
 import './Post.css';
 
-const Post = props => {
+export default props => {
   return (
     <div className='post-border'>
       <PostHeader
@@ -14,5 +14,3 @@ const Post = props => {
     </div>
   );
 };
-
-export default Post;

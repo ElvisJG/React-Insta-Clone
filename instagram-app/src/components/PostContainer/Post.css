@@ -1,6 +1,5 @@
 .posts-container {
-  height: 550px;
-  width: 30%;
+  width: 35%;
   margin: 2rem auto;
 }
 .post-border {
@@ -10,7 +9,7 @@
 }
 
 .post-image {
-  width: 100%;
+  width: 97.5%;
 }
 
 .post-header {
