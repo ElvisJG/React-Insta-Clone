@@ -6,12 +6,7 @@
   width: 800px;
   height: 100px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
-}
-
-hr {
-  height: 3rem;
-  color: #333;
+  border-bottom: 1px solid #777;
 }
 
 .logo {
