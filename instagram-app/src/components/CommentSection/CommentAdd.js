@@ -1,6 +1,10 @@
 import React from 'react';
-import './Comment.css';
+import './CommentSection.css';
 
 export default props => {
-  return null;
+  return (
+    <form>
+      <input className='comment-add' type='text' placeholder='Add Comment...' />
+    </form>
+  );
 };

@@ -1,11 +1,12 @@
 import React from 'react';
-import './Comment.css';
+import './CommentSection.css';
 
 export default props => {
   return (
     <div className='comment'>
-      <div className='comment'>{props.comment.text}</div>
-      <div className='user'>{props.comment.username}</div>
+      <div className='comments'>
+        <strong>{props.comment.username}</strong> {props.comment.text}
+      </div>
     </div>
   );
 };

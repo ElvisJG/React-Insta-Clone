@@ -1,6 +1,8 @@
 import React from 'react';
 import Comment from './Comment';
-import './Comment.css';
+import './CommentSection.css';
+import CommentAdd from './CommentAdd';
+import CommentInteract from './CommentInteract';
 
 export default class CommentSection extends React.Component {
   constructor(props) {
@@ -12,9 +14,11 @@ export default class CommentSection extends React.Component {
   render() {
     return (
       <div>
+        <CommentInteract />
         {this.state.comment.map((comment, index) => (
           <Comment comment={comment} key={index} />
         ))}
+        <CommentAdd />
       </div>
     );
   }

@@ -1,0 +1,25 @@
+.comments {
+  font-size: 1.25rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.comment-add {
+  width: 99%;
+  border-radius: 0px;
+  border-top: 1px solid #777;
+  margin-top: 1rem;
+}
+
+.icon-container {
+  margin-left: 1rem;
+}
+
+.icons {
+  margin-right: 0.75rem;
+}
+
+.likes {
+  text-align: left;
+  margin: -0.5rem 0 -0.5rem 1rem;
+}
