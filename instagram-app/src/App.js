@@ -13,10 +13,22 @@ export default class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({ data: dummyData });
+  }
+
+  searchHandler = event => {
+    const posts = this.state.data.filter(post => {
+      if (post.username.includes(event.target.value)) {
+        return post;
+      }
+    });
+  };
+
   render() {
     return (
       <div className='App'>
-        <SearchBar />
+        <SearchBar searchHandler={this.searchHandler} />
         <PostContainer posts={this.state.data} />
       </div>
     );
