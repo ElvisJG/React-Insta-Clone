@@ -9,13 +9,13 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: [],
-      filterData: []
+      posts: [],
+      filteredPosts: []
     };
   }
 
   componentDidMount() {
-    this.setState({ data: dummyData });
+    this.setState({ posts: dummyData });
   }
 
   searchHandler = event => {
@@ -24,7 +24,7 @@ export default class App extends React.Component {
         return post;
       }
     });
-    this.setState({ filterData: posts });
+    this.setState({ filterPosts: posts });
   };
 
   render() {
@@ -33,8 +33,8 @@ export default class App extends React.Component {
         <SearchBar searchHandler={this.searchHandler} />
         <PostContainer
           posts={
-            this.state.filterData.length > 0
-              ? this.state.filterData
+            this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
               : this.state.posts
           }
         />

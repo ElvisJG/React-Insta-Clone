@@ -3,8 +3,13 @@ import './CommentSection.css';
 
 export default props => {
   return (
-    <form>
-      <input className='comment-add' type='text' placeholder='Add Comment...' />
+    <form onSubmit={props.submitComment}>
+      <input
+        className='comment-add'
+        type='text'
+        placeholder='Add Comment...'
+        onChange={props.changeComment}
+      />
     </form>
   );
 };
