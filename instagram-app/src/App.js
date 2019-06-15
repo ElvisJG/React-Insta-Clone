@@ -9,7 +9,8 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData
+      data: [],
+      filterData: []
     };
   }
 
@@ -23,13 +24,20 @@ export default class App extends React.Component {
         return post;
       }
     });
+    this.setState({ filterData: posts });
   };
 
   render() {
     return (
       <div className='App'>
         <SearchBar searchHandler={this.searchHandler} />
-        <PostContainer posts={this.state.data} />
+        <PostContainer
+          posts={
+            this.state.filterData.length > 0
+              ? this.state.filterData
+              : this.state.posts
+          }
+        />
       </div>
     );
   }
