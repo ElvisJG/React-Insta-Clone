@@ -11,6 +11,11 @@ export default class Post extends React.Component {
       likes: props.post.likes
     };
   }
+
+  addLike = () => {
+    let likes = this.state.likes + 1;
+    this.setState({ likes });
+  };
   render() {
     return (
       <div className='post-border'>

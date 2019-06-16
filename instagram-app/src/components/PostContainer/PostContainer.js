@@ -5,8 +5,8 @@ import './Post.css';
 export default props => {
   return (
     <div className='posts-container'>
-      {props.posts.map(p => (
-        <Post key={p.imageUrl} post={p} />
+      {props.posts.map(post => (
+        <Post key={post.imageUrl} post={post} />
       ))}
     </div>
   );

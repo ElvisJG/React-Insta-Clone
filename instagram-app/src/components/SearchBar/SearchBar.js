@@ -6,14 +6,18 @@ import { FaRegCompass } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';
 // import { FaSearch } from 'react-icons/fa';
 
-export default () => {
+export default props => {
   return (
     <div className='search-bar-container'>
       <div className='image'>
         <img src={logo} alt='logo' className='logo' />
       </div>
       <div className='search-bar'>
-        <input type='text' placeholder='🔍  search' />
+        <input
+          type='text'
+          placeholder='🔍  search'
+          onKeyDown={props.searchPosts}
+        />
       </div>
       <div className='icon-container'>
         <div className='icons'>

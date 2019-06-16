@@ -48,7 +48,7 @@ export default class CommentSection extends React.Component {
     this.setState({ comments, comment: '' });
     setTimeout(() => {
       this.setComments();
-    }, 5000);
+    }, 4000);
   };
 
   render() {
