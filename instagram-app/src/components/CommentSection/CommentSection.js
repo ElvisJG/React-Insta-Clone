@@ -48,15 +48,25 @@ export default class CommentSection extends React.Component {
     this.setState({ comments, comment: '' });
     setTimeout(() => {
       this.setComments();
-    }, 4000);
+    }, 500);
   };
 
   render() {
+    // return (
+    //   <div>
+    //     {this.state.comment.map((comment, index) => (
+    //       <Comment comment={comment} key={index} />
+    //     ))}
+    //     <CommentAdd
+    //       comment={this.state.comment}
+    //       submitComment={this.handleCommentSubmit}
+    //       changeComment={this.commentHandler}
+    //     />
     return (
       <div>
         <CommentInteract />
-        {this.state.comment.map((comment, index) => (
-          <Comment comment={comment} key={index} />
+        {this.state.comments.map((c, i) => (
+          <Comment key={i} comment={c} />
         ))}
         <CommentAdd
           comment={this.state.comment}

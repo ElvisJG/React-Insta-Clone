@@ -6,16 +6,27 @@ import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 
 export default class App extends React.Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     data: [],
+  //     filteredData: []
+  //   };
+  // }
+
+  // componentDidMount() {
+  //   this.setState({ data: dummyData });
+  // }
+
   constructor() {
     super();
     this.state = {
-      data: [],
-      filteredData: []
+      posts: [],
+      filteredPosts: []
     };
   }
-
   componentDidMount() {
-    this.setState({ data: dummyData });
+    this.setState({ posts: dummyData });
   }
 
   // searchHandler = event => {
@@ -33,19 +44,38 @@ export default class App extends React.Component {
         return p;
       }
     });
-    this.setState({ filteredData: posts });
+    this.setState({ filteredPosts: posts });
   };
+
+  //   render() {
+  //     return (
+  //       <div className='App'>
+  //         <SearchBar
+  //           searchHandler={this.searchPostsHandler}
+  //           searchTerm={this.state.searchTerm}
+  //         />
+  //         <PostContainer
+  //           posts={
+  //             this.state.filteredPosts.length > 0
+  //               ? this.state.filteredPosts
+  //               : this.state.posts
+  //           }
+  //         />
+  //       </div>
+  //     );
+  //   }
+  // }
 
   render() {
     return (
       <div className='App'>
         <SearchBar
-          searchHandler={this.searchPostsHandler}
           searchTerm={this.state.searchTerm}
+          searchPosts={this.searchPostsHandler}
         />
         <PostContainer
-          data={
-            this.state.filteredData.length > 0
+          posts={
+            this.state.filteredPosts.length > 0
               ? this.state.filteredPosts
               : this.state.posts
           }
