@@ -2,7 +2,6 @@ import React from 'react';
 import Comment from './Comment';
 import './CommentSection.css';
 import CommentAdd from './CommentAdd';
-import CommentInteract from './CommentInteract';
 import PropTypes from 'prop-types';
 
 export default class CommentSection extends React.Component {
@@ -64,7 +63,6 @@ export default class CommentSection extends React.Component {
     //     />
     return (
       <div>
-        <CommentInteract />
         {this.state.comments.map((c, i) => (
           <Comment key={i} comment={c} />
         ))}

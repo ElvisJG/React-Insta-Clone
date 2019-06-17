@@ -1,5 +1,4 @@
 import React from 'react';
-import './CommentSection.css';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaRegComment } from 'react-icons/fa';
 
